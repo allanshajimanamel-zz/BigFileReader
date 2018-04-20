@@ -27,7 +27,7 @@ public class Processor {
 		this.executor = executor;
 		batch = new HashMap<>();
 		this.batchSize = batchSize;
-	};
+	}
 
 	public void process(String fileName) throws IOException, InterruptedException {
 		Files.lines(Paths.get(fileName)).map(line -> Parser.parse(line)).map(parts -> {
